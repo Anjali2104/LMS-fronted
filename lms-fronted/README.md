@@ -2,25 +2,25 @@
 
 ### Setup instructions
 
-1.Clone the project
+1. Clone the project
 
 ```
   git clone git@github.com:Anjali2104/LMS-fronted.git
 ```
 
-2.Move into the directory.
+2. Move into the directory.
 
 ```
   cd lms-fronted
 ```
 
-3.Install dependencies.
+3. Install dependencies.
 
 ```
    npm i
 ```
 
-4.Run the server.
+4. Run the server.
 
 ```
 npm run dev
@@ -28,19 +28,19 @@ npm run dev
 
 ### How to setup tailwind in your project [Link](https://tailwindcss.com/docs/guides/vite)
 
-1.Install tailwind and other dependencies.
+1. Install tailwind and other dependencies.
 
 ```
 npm install -D tailwindcss postcss autoprefixer
 ```
 
-2.Create the `tailwind.config.js` file
+2. Create the `tailwind.config.js` file
 
 ```
  npx tailwindcss init -p
 ```
 
-3.Add the files and extensions to tailwind config in the content property.
+3. Add the files and extensions to tailwind config in the content property.
 
 ```
   content: [
@@ -49,7 +49,7 @@ npm install -D tailwindcss postcss autoprefixer
   ],
 ```
 
-4.Add the tailwind directives on the top of index.css file.
+4. Add the tailwind directives on the top of index.css file.
 
 ```
   @tailwind base;
@@ -57,4 +57,11 @@ npm install -D tailwindcss postcss autoprefixer
   @tailwind utilities;
 ```
 
-5.Then run the server, tailwind should be integrated...
+5. Then run the server, tailwind should be integrated...
+
+ ### Adding plugins and dependencies
+
+ ```
+  npm install @reduxjs/toolkit react-redux react-router-dom react-icons react-chartjs-2 chart.js daisyui axios react-hot-toast @tailwindcss/line-clamp
+
+ ```
