@@ -41,22 +41,41 @@ export const login = createAsyncThunk("/auth/signin", async (data) => {
     }
 });
 
-export const logout = createAsyncThunk("/auth/logout", async () => {
+// export const logout = createAsyncThunk("/auth/logout", async () => {
+//     try {
+//         const response = axiosInstance.post("user/logout");
+//         await toast.promise(response, {
+//             loading: 'Wait! logging out your account',
+//             success: (data) => {
+//                 return data?.data?.message;
+//             },
+//             error: 'Failed to logout your account'
+//         });
+//         return await response;
+//     } catch(error) {
+//         console.log(error);
+//         toast.error(error?.response?.data?.message);
+//     }
+// });
+export const logout = createAsyncThunk("auth/logout", async () => {
     try {
-        const response = axiosInstance.post("user/logout");
-        toast.promise(response, {
-            loading: 'Wait! logging out your account',
-            success: (data) => {
-                return data?.data?.message;
-            },
-            error: 'Failed to logout your account'
-        });
-        return await response;
-    } catch(error) {
-        console.log(error);
-        toast.error(error?.response?.data?.message);
+      let res = axiosInstance.post("/user/logout");
+  
+      await toast.promise(res, {
+        loading: 'Wait! logging out your account',
+        success: (data) => {
+          return data?.data?.message;
+        },
+        error: "Failed to log out",
+      });
+  
+      // getting response resolved here
+      res = await res;
+      return res.data;
+    } catch (error) {
+      toast.error(error.message);
     }
-});
+  });
 
 const authSlice = createSlice({
     name: "auth",

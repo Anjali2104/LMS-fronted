@@ -47,13 +47,13 @@ function Signup() {
 
  async function onFormSubmit(e){
   e.preventDefault();
-  console.log(signupDetails)
+ // console.log(signupDetails)
   if(!signupDetails.email || !signupDetails.password || !signupDetails.fullName ){
     toast.error("Please fill all the details");
     return;
   }
   if(signupDetails.fullName.length<5){
-    toast.error("Name shoul be atleast of 5 characters")
+    toast.error("Name should be atleast of 5 characters")
     return;
   }
   if(!isEmail(signupDetails.email)){
@@ -72,8 +72,8 @@ function Signup() {
   formData.append("avatar", signupDetails.avatar);
 
   const response = await dispatch(createAccount(formData));
-  console.log(response)
-  if(response?.payload?.success){
+  //console.log(response)
+  if(response?.payload?.data){
     navigate('/')
   }
   setSignupDetails({
@@ -148,7 +148,7 @@ function Signup() {
                 Create account
              </button>
              <p className='text-center'>
-               Already have an account ? <Link to='/login' className='cursor-pointer text-accent'>Login</Link>
+               Already have an account ? <Link to='/signin' className='cursor-pointer text-accent'>Login</Link>
              </p>
         </form>
     </div>
