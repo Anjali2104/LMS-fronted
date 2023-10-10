@@ -9,6 +9,7 @@ import Contact from './pages/Contact'
 import Signup from './pages/Signup'
 import Denied from './pages/Denied'
 import CourseList from './pages/Course/CourseList'
+import CourseDes from './pages/Course/CourseDes'
 function App() {
   
 
@@ -20,6 +21,7 @@ function App() {
     <Route path='/signup' element={<Signup/>}/>
     <Route path='/signin' element={<Signin/>}/>
     <Route path='/courses' element={<CourseList/>}/>
+    <Route path='/course/description' element={<CourseDes/>}/>
     <Route path='/denied' element={<Denied/>}/>
     <Route path='*' element={<Notfound/>}/>
    </Routes>
