@@ -73,7 +73,7 @@ function CreateCourse() {
           className='flex flex-col justify-center gap-5 rounded-lg p-4 text-white w-[700px] my-10 shadow-[0_0_10px_black] relative'
         >
           <Link onClick={() => navigate(-1)} className='absolute top-8 text-2xl link text-accent cursor-pointer'>
-          <AiOutlineArrowLeft />
+            <AiOutlineArrowLeft />
           </Link>
           <h1 className='text-center text-2xl font-bold'>
             Create new course
@@ -96,7 +96,7 @@ function CreateCourse() {
                   )}
                 </label>
                 <input 
-                className='hidden'
+                  className='hidden'
                   type="file"
                   id='image_uploads'
                   accept='.jpg, .png, .jpeg, .svg'
@@ -159,14 +159,14 @@ function CreateCourse() {
                     placeholder='enter the description of the course'
                     onChange={handleUserInput}
                     value={userInput.description}
-                    className='px-2 py-1 bg-transparent border h-24 resize-none overflow-y-scroll'
+                    className='px-2 py-1 bg-transparent border h-24 overflow-y-scroll resize-none'
                   />
                 </div>
             </div>
           </main>
           <button
-          type='submit'
-          className='w-full py-2 rounded-sm font-semibold text-lg cursor-pointer bg-yellow-600 hover:bg-yellow-500 transition-all ease-in-out duration-300'
+           type='submit'
+           className='w-full py-2 rounded-sm font-semibold text-lg cursor-pointer bg-yellow-600 hover:bg-yellow-500 transition-all ease-in-out duration-300'
           >
             Create Course
           </button>

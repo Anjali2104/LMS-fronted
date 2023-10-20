@@ -1,9 +1,10 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 
-function CourseCard({card}) {
+function CourseCard({data}) {
 
   const navigate = useNavigate();
+  
   return (
     <div onClick={() => navigate("/course/description", {state: {...data}})}
      className='text-white w-[22rem] h-[430px] shadow-lg rounded-lg cursor-pointer group overflow-hidden bg-zinc-700'>
@@ -27,7 +28,7 @@ function CourseCard({card}) {
             Instructor: <span className='font-bold text-yellow-500'>{data?.createdBy}</span>
           </p>
           <p className="font-semibold">
-            Total Lectures: <span className='font-bold text-yellow-500'>{data?. numbersOfLectures}</span>
+            Total Lectures: <span className='font-bold text-yellow-500'>{data?.numbersOfLectures}</span>
           </p>
         </div>
       </div>
@@ -35,4 +36,4 @@ function CourseCard({card}) {
   )
 }
 
-export default CourseCard
+export default CourseCard ; 
